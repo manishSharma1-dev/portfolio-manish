@@ -1,9 +1,46 @@
 import React from 'react'
+import Image from 'next/image'
+import project1 from '@/public/project-1.png'
+import project2 from '@/public/project2.png'
+import Link from 'next/link'
+
 
 export default function Project() {
   return (
-    <div>
-      this is a project Page
+    <div className='pl-52 pr-52 pt-10 pb-3'>
+      <h1 className='text-2xl font-bold bg-gradient-to-tr from-red-500 to-fuchsia-700 inline-block text-transparent bg-clip-text pb-3'>Projects</h1>
+      <p className='text-sm opacity-65'>I've worked on a variety of <span className='font-bold text-opacity-100'>real-world projects,</span> applying modern technologies to solve practical challenges and build impactful applications.</p>
+
+      <div className='flex justify-between items-center'>
+         <p className='text-xs opacity-35 pt-4'>Some of them are listed here..</p> 
+      </div>
+
+      <div className='pt-10 pb-10 pl-20 pr-20'>
+        <div className='flex gap-x-20 gap-y-5 flex-wrap justify-center'>
+
+          <div className='w-[40%]'>
+            <Image src={project1} alt='Github project' className='rounded-sm ' />
+            <div className='flex flex-col text-sm pt-3 gap-1'>
+              <h1 className='font-bold'>FindPeace</h1>
+              <p className='text-xs opacity-40'>A platform where you can share your thought, or something that building over time. No profile, no follower just a moment of relief in total privacy.</p>
+            </div>
+          </div>
+
+          <div className='w-[40%]'>
+            <Image src={project2} alt='Github project' className='rounded-sm ' />
+            <div className='flex flex-col text-sm pt-3 gap-1'>
+              <h1 className='font-bold'>AuctionPoint</h1>
+              <p className='text-xs opacity-40'>A platform where you can find the best price of the items.</p>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+      <p  className='text-xs pt-4'>See all my project <span className='text-purple-500 underline underline-offset-2 '><Link href={'/projects'}>on project page.</Link></span></p>
+
     </div>
   )
 }
