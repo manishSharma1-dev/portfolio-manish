@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
           <p className='text-sm'>Aspiring Software Engineer/Developer</p>
           <p className='text-sm'>Turning <span className='opacity-50'>ideas</span> into code ...</p>
           <div className='flex gap-3 pt-3'>
-              <Button className='text-xs pt-1 pb-1 pl-3 pr-3' variant={'secondary'}>Projects</Button>
+              <Button className='text-xs pt-1 pb-1 pl-3 pr-3' variant={'secondary'}><Link href={'/projects'}>Projects</Link></Button>
               <Button className='text-xs pt-1 pb-1 pl-3 pr-3' variant={'ghost'}>Download CV</Button>
           </div>
         </div>
