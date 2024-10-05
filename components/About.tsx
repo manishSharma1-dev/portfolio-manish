@@ -19,7 +19,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className='bg-[#1e1e1e] pt-10 pb-10 pl-52 pr-52 mt-10 flex flex-col gap-5'>
+      <div className='bg-[#1e1e1e] pt-16 pb-16 pl-52 pr-52 mt-10 flex flex-col gap-5 gridlinesdesign'>
          <div>
             <h1 className='underline text-xl underline-offset-2'>About me</h1>
             <p className='pt-5 w-[70%] text-[13px] opacity-70'>I am Manish Sharma, a developer with strong Foundation in javascript, typescript, Sql, and basices in Java. Currently i am learning go because of its high performance in building backend projects. Always eager to learn, and excited about leveraging technology to drive innovation. Let' s Connect.</p>

@@ -116,3 +116,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.gridlinesdesign{
+  position: relative;
+  background-image:linear-gradient(#fff 2px, transparent 1px),
+  linear-gradient(90deg,hsl(0, 0%, 100%) 2px,transparent 1px);
+  background-size: 80px 80px;
+  font-family: sans-serif;
+}
+
+.gridlinesdesign::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to bottom,rgba(29, 28, 28, 0.8) 0%,rgb(27, 26, 26) 100%),
+  linear-gradient(to right,rgba(45, 45, 45, 0.8) 50%,rgb(9, 9, 9) 60%);
+  pointer-events: none;
+}
+
+.gridlinesdesign > * {
+  position: relative;
+  z-index: 1;
+}
