@@ -4,7 +4,7 @@ import Project from "@/components/Project";
 
 export default function Home() {
   return (
-    <main className="bg-primary text-white min-h-screen">
+    <main className="bg-black text-white min-h-screen relative">
       <Navbar />
       <About />
       <Project />

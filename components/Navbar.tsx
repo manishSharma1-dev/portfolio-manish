@@ -15,23 +15,23 @@ export default function Navbar() {
   }
 
   return (
-    <div className='flex justify-between items-center pt-2 pb-4 pl-4 pr-4 text-sm border-b'>
-      <div className='flex gap-10 items-center'>
+    <div className='flex justify-between items-center ml-36 mr-36 pt-5 pb-4 pl-4 pr-4 text-sm'>
+      <div className='flex gap-12 items-center'>
           <div>
             <Avatar>
-              <AvatarImage src='https://avatars.githubusercontent.com/u/167399572?v=4' className=' rounded-[50%] w-7 hover:grayscale' />
+              <AvatarImage src='./githubuser.png' className='cursor-pointer rounded-[50%] w-7 hover:grayscale ' />
               <AvatarFallback>Profile</AvatarFallback>
             </Avatar>
           </div>
-          <p><Link href={'/projects'}>Projects</Link></p>
-          <p><Link href={'/blogs'}><span className='font-bold decoration-2 underline underline-offset-4 hover:opacity-50 decoration-fuchsia-600 '>Blogs</span></Link></p>
+          <p className='hover:opacity-70'><Link href={'/projects'}>Projects</Link></p>
+          <p><Link href={'/blogs'}><span className='hover:opacity-80 '>Blogs</span></Link></p>
       </div>
 
       <div className='flex gap-6 items-center'>
         <Link href={'https://github.com/manishSharma1-dev'}><GitHubLogoIcon  fontSize={20} className='opacity-50 hover:opacity-100 '/></Link>
-        <Link href={'https:///www.linkedin.com/in/manish-sharma111'}><Linkedin size={20} className='opacity-50 hover:opacity-100 '/></Link>
-        <MailIcon size={20} className='opacity-50 hover:opacity-100 cursor-pointer'  onClick={handletoemail}/>
+        <Link href={'https:///www.linkedin.com/in/manish-sharma111'}><Linkedin size={18} className='opacity-50 hover:opacity-100 '/></Link>
+        <MailIcon size={18} className='opacity-50 hover:opacity-100 cursor-pointer'  onClick={handletoemail}/>
       </div>
-    </div>
+    </div> 
   )
 }
