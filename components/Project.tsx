@@ -3,6 +3,7 @@ import Image from 'next/image'
 import project1 from '@/public/project-1.png'
 import project2 from '@/public/project2.png'
 import project3 from "@/public/project3.png"
+import project4 from "@/public/project4.png"
 import { LinkIcon } from 'lucide-react'
 import Link from 'next/link'
 
@@ -10,7 +11,7 @@ import Link from 'next/link'
 export default function Project() {
   return (
     <div className='pl-48 pr-48 pt-10 pb-3'>
-      <h1 className='text-3xl font-bold text-cyan-400 pb-10'>Projects</h1>
+      <h1 className='text-3xl font-bold text-cyan-400 pb-10'>Projects.</h1>
       <p className='text-sm'>
         <span className='opacity-50 leading-6'>I've worked on a variety of </span>
         <span className='font-bold'> real-world projects, </span>
@@ -18,7 +19,7 @@ export default function Project() {
       </p>
 
       <div className='flex justify-between items-center'>
-         <p className='text-xs opacity-35 pt-8'>Some of them are listed here..</p> 
+         <p className='text-xs opacity-35 pt-8 animate-pulse'>Some of them are listed here..</p> 
       </div>
 
       <div className='pt-16 pb-10 pl-20 pr-20'>
@@ -32,6 +33,17 @@ export default function Project() {
                  <p><Link href={'https://github.com/manishSharma1-dev/finedPeace'}><LinkIcon size={10} color='fuchsia'/></Link></p>
               </div>
               <p className='text-xs opacity-40 pt-2'>A platform where you can share your thought, or something that building over time. No profile, no follower just a moment of relief in total privacy.</p>
+            </div>
+          </div>
+
+          <div className='w-[40%] rounded-lg'>
+            <Image src={project4} alt='generateMindMap' className='rounded-md' />
+            <div className='flex flex-col text-sm pt-3 gap-2'>
+              <div className='flex items-center gap-3 pt-2'>
+              <Link href={'https://github.com/manishSharma1-dev/AuctionPoint'}><h1 className='font-bold'>Generate Mindmap</h1></Link>
+                 <p><Link href={'https://github.com/manishSharma1-dev/mindmap'}><LinkIcon size={10} color='fuchsia'/></Link></p>
+              </div>
+              <p className='text-xs opacity-40 pt-2'>Generate your mindmap with ease.</p>
             </div>
           </div>
 

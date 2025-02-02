@@ -1,24 +1,39 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
+import { Mail,Copy,CopyCheckIcon } from "lucide-react"
 
 
 export default function About() {
+  const [checkifEmailCopy,setCheckIfEmailCopy] = useState(false)
+
+  function handlecopyButton() {
+    navigator.clipboard.writeText('manishvsharma1@gmail.com')
+    setCheckIfEmailCopy(true)
+  }
+
   return (
     <div>
 
       <div className='pl-48 pr-48 pt-20'>
         <div className='flex flex-col gap-4'>
-          <h1 className='text-5xl font-bold inline-block '>Hi ,I'm <span className='text-cyan-400'>Manish Sharma</span></h1>
-          <p className='text-sm font-semibold'>Aspiring Software Engineer/Developer who loves to</p>
+          <h1 className='text-5xl font-bold inline-block '>Hi ,I'm <span className='text-cyan-400'>Manish Sharma.</span></h1>
+          <p className='text-sm font-medium'>Aspiring Software Engineer/Developer who loves to</p>
           <p className='text-sm'>
             <span className='opacity-50'>Turn </span>
             <span>ideas </span> 
             <span className='opacity-50'>into code ...</span>
           </p>
           <div className='flex gap-3 pt-3'>
-              <Button className='text-xs pt-1 pb-1 pl-3 pr-3' variant={'secondary'}><Link href={'/projects'}>Projects</Link></Button>
+              <Button className='text-xs pt-1 pb-1 pl-3 pr-3' variant={'default'}><Link href={'/projects'}>Projects</Link></Button>
               <Button className='text-xs pt-1 pb-1 pl-3 pr-3'>Download CV</Button>
+          </div>
+          <div className='flex items-center gap-2 '>
+            <Mail size={10}/>
+            <p className='text-cyan-400 text-[10px]'>manishvsharma1@gmail.com</p>
+            {checkifEmailCopy == false ? <Copy size={10} className='cursor-pointer' onClick={handlecopyButton}/> : <CopyCheckIcon  size={10} className='cursor-pointer' onClick={() => setCheckIfEmailCopy(false)} />}
           </div>
         </div>
       </div>
