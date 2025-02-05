@@ -9,6 +9,14 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		screens: {
+			'xs': '315px',  
+			'3xl': '1800px', 
+			'4xl': '2200px', 
+			'5xl': '2600px', 
+        	'6xl': '3000px',
+			'7xl' :'3800px',
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -78,7 +86,7 @@ const config: Config = {
   				}
   			}
   		}
-  	}
+  	},
   },
   plugins: [require("tailwindcss-animate")],
 };
