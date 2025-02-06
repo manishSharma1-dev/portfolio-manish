@@ -72,7 +72,7 @@ export default function Page() {
         <span className='text-cyan-400'>Section.</span>
       </h1>
       <p className='text-sm text-center pt-8 xs:text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-2xl 3xl:text-2xl 4xl:text-2xl 5xl:text-3xl 6xl:text-4xl'>
-          <span className=' opacity-50'>I've worked on a variety of </span>
+          <span className=' opacity-50'>{"I've"} worked on a variety of </span>
           <span className='font-semibold'> real-world projects, </span>
           <span className=' opacity-50'>utilizing modern technologies like Next.js, TypeScript, and Node.js to tackle practical challenges. </span>
       </p>

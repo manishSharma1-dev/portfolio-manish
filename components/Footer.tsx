@@ -22,9 +22,10 @@ export default function Footer() {
       <p className='text-center opacity-50 leading-6'>Always open to learn, {"Let's"} have a quick Chat.</p>
 
       <div className='flex justify-center items-center gap-5 xs:py-4 sm:py-4 md:py-4 lg:py-4 xl:py-6 2xl:py-7 3xl:py-8 4xl:py-8'>
-        <p className='hover:text-cyan-500'>About</p>
-        <p className='hover:text-cyan-500' onClick={() => router.push("/api/projects")}>Project</p>
-        <p className='hover:text-cyan-500'>Blog</p>
+            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/")}>Home</p>
+            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/about")}>About</p>
+            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/projects")}>Project</p>
+            <p className='hover:text-cyan-500 cursor-pointer' onClick={() => router.push("/blog")}>Blog</p>
       </div>
 
       <div className='flex justify-center items-center gap-4 pt-5'>
